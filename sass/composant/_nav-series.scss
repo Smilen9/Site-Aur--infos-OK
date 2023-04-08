@@ -1,0 +1,17 @@
+@import '../util/variable';
+
+.menu-serie{
+    height: 50px;
+    width: 27%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 150px auto;
+    a{
+        color: white;
+        text-decoration: none;
+        background-color: $color-tri;
+        border-radius: 50%;
+        padding: 4px 13px;
+    }
+}

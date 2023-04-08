@@ -1,0 +1,70 @@
+// Gerer la section qui contient le btn
+.search {
+  width: 100%;
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#containerBtn{
+  height: 100%;
+  margin: 5px;
+  text-align: center
+}
+
+//Div qui contient le text + div avec le btn
+.search #containerBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 122px;
+  height: 25px;
+}
+
+//Le texte
+.search #containerBtn #darkmode {
+  font-size: 1em;
+}
+
+//La div qui contient le btn
+.search #containerBtn .dark {
+  cursor: pointer;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  z-index: 999999;
+  width: 45px;
+  height: 22px;
+  background-color: grey;
+  border-radius: 100px;
+}
+//code qui gere le btn
+.search #containerBtn .dark > #darkBtn {
+  cursor: pointer;
+  border: none;
+  margin: 2px;
+  width: 18px;
+  height: 18px;
+  background-color: #dadada;
+  border-radius: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+// .citysearch > .container {
+//   width: 100%;
+//   margin: auto;
+// }
+
+//darkBody est la classe qui est injecté grace a javaScript a l'activation du bouton
+.darkBody {
+background-color: #333;
+cursor: default;
+color: white;
+}
+
+//Code qui sert au mouvement du btn
+.darkBody .darkBtn {
+transform: translateX(23px);
+}
