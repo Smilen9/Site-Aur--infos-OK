@@ -598,5 +598,21 @@ footer i {
     border-bottom: 2px solid black;
   }
 }
+@media screen and (max-width: 1020px){
+  .apropos {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    line-height: 150%;
+}
+
+.texte-propos{
+  margin: auto;
+  margin-bottom: 200px;
+}
+.photo-propos img{
+  display: none;
+}
+}
 
 /*# sourceMappingURL=style.css.map */
