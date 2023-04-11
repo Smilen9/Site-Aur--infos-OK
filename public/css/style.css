@@ -236,6 +236,11 @@ nav {
 }
 
 .img-aure{
+  margin: 30px 0 120px;
+}
+
+.img-aure img{
+  width: 100%;
   margin: 20px 0;
 }
 
@@ -598,21 +603,31 @@ footer i {
     border-bottom: 2px solid black;
   }
 }
-@media screen and (max-width: 1020px){
-  .apropos {
+
+@media screen and (max-width: 960px) {  
+  .apropos{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .texte-propos{
     margin: auto;
-    line-height: 150%;
+    width: 75%;
+  }
+
+  .photo-propos{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 150px;
+  }
+
+  .photo-propos img{ 
+    width: 100%;
+    position: relative;
+    margin: 30px -50px;
+    height: 500px;
+  }
 }
 
-.texte-propos{
-  margin: auto;
-  margin-bottom: 200px;
-}
-.photo-propos img{
-  display: none;
-}
-}
 
 /*# sourceMappingURL=style.css.map */
