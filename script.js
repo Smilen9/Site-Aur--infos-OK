@@ -19,4 +19,3 @@ if (
 ) {
   body.classList.add("darkBody");       // Alors on ajoute la class au body
 }
-

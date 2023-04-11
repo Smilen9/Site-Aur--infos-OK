@@ -215,7 +215,16 @@ nav {
   width: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+
+.photo-propos{
+  width: 400px;
+  height: 675px;
+  margin: 50px 0 200px;
+  background-image: url(../../images/Aure.jpg);
+  background-repeat: no-repeat;
+  object-fit: cover;
 }
 
 .index_photo {
@@ -227,7 +236,7 @@ nav {
 }
 
 .img-aure{
-  margin: 10px;
+  margin: 20px 0;
 }
 
 .principal_index {
@@ -270,7 +279,7 @@ nav {
 
 .apropos {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: auto;
   line-height: 145%;
 }

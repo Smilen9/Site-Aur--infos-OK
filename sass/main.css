@@ -1,4 +1,78 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+.search {
+  width: 100%;
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#containerBtn {
+  height: 100%;
+  margin: 5px;
+  text-align: center;
+}
+
+.search #containerBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 122px;
+  height: 25px;
+}
+
+.search #containerBtn #darkmode {
+  font-size: 1em;
+}
+
+.search #containerBtn .dark {
+  cursor: pointer;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  z-index: 999999;
+  width: 45px;
+  height: 22px;
+  background-color: grey;
+  border-radius: 100px;
+}
+
+.search #containerBtn .dark > #darkBtn {
+  cursor: pointer;
+  border: none;
+  margin: 2px;
+  width: 18px;
+  height: 18px;
+  background-color: #dadada;
+  border-radius: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.darkBody {
+  background-color: #333;
+  cursor: default;
+  color: white;
+}
+
+.darkBody .darkBtn {
+  transform: translateX(23px);
+}
+
+.menu-serie {
+  height: 50px;
+  width: 27%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 150px auto;
+}
+.menu-serie a {
+  color: white;
+  text-decoration: none;
+  background-color: #B8CBD0;
+  border-radius: 50%;
+  padding: 4px 13px;
+}
 
 * {
   box-sizing: border-box;
@@ -7,7 +81,7 @@
 
 body,
 html {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   margin: 0;
   font-size: 16px;
   font-weight: 400;
@@ -16,9 +90,9 @@ html {
 header,
 main {
   position: relative;
-  max-width: 1440px;
+  max-width: 100%;
   margin: auto;
-  line-height: 200%;
+  line-height: 120%;
 }
 
 h2 {
@@ -27,16 +101,20 @@ h2 {
 
 /* HEADER */
 header {
-  height: 100px;
+  width: 100%;
+  height: 105px;
   background-color: #709CA7;
   display: flex;
-  justify-content: flex-end;
   margin-bottom: 50px;
 }
 
 nav {
   display: flex;
-  padding: 20px;
+  padding: 40px 0 0 0;
+}
+
+.menu {
+  height: 81%;
 }
 
 .menu li {
@@ -72,12 +150,11 @@ nav {
 }
 
 .submenu {
-  position: absolute;
+  position: relative;
+  z-index: 3;
   min-height: 50px;
   background: #137C8B;
-  left: 0;
   padding: 0;
-  margin-left: 65%;
   transition: all 0.4s cubic-bezier(0.34, 0.06, 0.5, 0.75);
   -webkit-transition: all 0.4s cubic-bezier(0.34, 0.06, 0.5, 0.75);
   transform: rotateX(-90deg);
@@ -115,69 +192,111 @@ nav {
 
 .header-logo {
   height: 105px;
-  width: 15%;
-  position: absolute;
-  left: 0;
+  width: 102%;
+  position: relative;
+  left: -2px;
 }
 
 .container_index {
+  position: relative;
+  z-index: 1;
+  width: 95%;
+  margin: auto;
   display: flex;
-  height: 500px;
+  justify-content: space-evenly;
 }
 
-.photo_index {
-  background-color: aquamarine;
-  width: 30%;
-  height: 90%;
-}
-
-.principal_index {
-  padding: 20px;
-  width: 70%;
-}
-
-.principal_index span {
+.photo_home {
+  width: 60%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-.logo_index {
-  height: 500px;
+.index_photo {
+  width: 100%;
+}
+.index_photo img {
+  width: 100%;
+}
+
+.principal_index {
+  width: 20%;
+  text-align: justify;
+}
+.principal_index .titre_bloc {
+  display: block;
   text-align: center;
-  background-color: bisque;
+}
+.principal_index .italic {
+  font-style: italic;
+}
+
+.logo_index {
+  padding-top: 100px;
+  margin: auto;
+  width: 95%;
+  text-align: center;
+  font-size: x-large;
+  height: 900px;
+}
+
+.photo_partenaires {
+  margin: auto;
+  max-width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logo_partenaires {
+  width: 23%;
+  margin: 22px;
+}
+.logo_partenaires img {
+  height: 210px;
+  width: 75%;
+}
+
+.photo-propos img {
+  padding: 10px;
+  position: fixed;
+  top: 20px;
+  width: 200px;
 }
 
 .apropos {
   display: flex;
   justify-content: space-around;
+  margin: auto;
+  line-height: 145%;
 }
 
-.parcours {
-  margin-bottom: 50px;
+.texte-propos {
+  margin-bottom: 200px;
+  width: 35%;
+  text-align: justify;
 }
-
-.reves {
-  margin-top: 50px;
+.texte-propos p {
+  margin: 40px 0;
 }
 
 .center {
   width: 47%;
   display: flex;
   font-size: 15px;
-}
-
-img {
-  height: 400px;
-  width: 40%;
+  margin: 10px 10px 125px;
+  padding: 10px;
 }
 
 .card {
   max-width: 460px;
   margin: 50px auto;
+  height: 100%;
 }
 
 .text {
-  width: 60%;
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
@@ -209,22 +328,22 @@ img {
 }
 
 .container_menu {
-  font-size: 15px;
+  margin: auto;
   line-height: 1.45rem;
   height: 100%;
-  max-width: 1440px;
+  max-width: 97%;
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .card-with-hover {
   position: relative;
   overflow: hidden;
   text-align: center;
-  height: 450px;
+  height: 475px;
   margin: 0;
+  width: 60%;
 }
 
 .card-with-hover > img {
@@ -309,14 +428,19 @@ img {
 
 /* FOOTER */
 footer {
+  position: fixed;
+  z-index: 5;
   background-color: #7A90A4;
   height: 120px;
-  margin-top: 50px;
-  padding: 15px;
+  margin-top: 100px;
+  padding: 10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 footer a {
   width: 5%;
-  margin: 0 20px;
+  margin: 0 25px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -355,4 +479,111 @@ footer i {
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
+  color: black;
+}
+
+@media screen and (max-width: 660px) {
+  .menu li a:hover:before {
+    background: none;
+  }
+}
+@media screen and (max-width: 430px) {
+  header {
+    height: 130px;
+  }
+  nav {
+    display: flex;
+    padding: 25px 0px 18px 0;
+  }
+}
+@media screen and (max-width: 860px) {
+  .submenu {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-logo {
+    display: none;
+  }
+  .logo_index {
+    display: none;
+  }
+}
+@media screen and (max-witdh: 950px) {
+  .container_index {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 767px) {
+  menu ::before {
+    text-align: center;
+    display: none;
+  }
+}
+@media screen and (max-width: 775px) {
+  .container_index {
+    flex-direction: column-reverse;
+  }
+  .principal_index {
+    width: 75%;
+    margin: 15px auto;
+  }
+  .photo_home {
+    display: none;
+  }
+  .index_photo img {
+    width: 90%;
+    display: block;
+    margin: 15px auto;
+  }
+}
+@media screen and (max-width: 1020px) and (min-width: 710px) {
+  .center {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 709px) {
+  .container_menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .center {
+    width: 100%;
+    flex-direction: column;
+  }
+  .card-with-hover {
+    width: 85%;
+    margin: auto;
+  }
+  .apropos {
+    margin: auto;
+    width: 90%;
+  }
+  .texte-propos {
+    width: 85%;
+  }
+  .photo {
+    display: none;
+  }
+  nav {
+    padding: 10px;
+  }
+  .menu {
+    padding: 10px 0 0 0;
+    margin: -8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu li {
+    margin: 5px;
+  }
+  .menu li a {
+    padding: 1px;
+    border-bottom: 2px solid black;
+  }
 }/*# sourceMappingURL=main.css.map */
