@@ -222,8 +222,8 @@ nav {
   box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.15);
   position: fixed;
   border-radius: 35px;
-  width: 270px;
-  height: 470px;
+  width: 310px;
+  height: 480px;
   margin:0 -60px ;
 }
 
@@ -279,7 +279,7 @@ nav {
 
 .apropos {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: auto;
   line-height: 150%;
 }
